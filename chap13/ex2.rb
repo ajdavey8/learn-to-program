@@ -11,7 +11,7 @@ class OrangeTree
 		if @height < 42
 			@height += 2
 		end
-		if @age < 80
+		if @age < 35
 			@age += 1
 			produce_fruit
 			puts "tree grew to #{@height} and is #{age} years old"
@@ -23,11 +23,12 @@ class OrangeTree
 
 	def produce_fruit
 		if age > 4
-			@orange_count = age*9
-		elsif age > 31
-			@orange_count = age*18
-		elsif age > 67
+			@orange_count = age*12
+		elsif age >21
 			@orange_count = age*25
+		elsif age > 30
+			@orange_count = age*16
+
 		else
 			@orange_count = 0
 		end
@@ -44,7 +45,7 @@ class OrangeTree
 end
 
 t=OrangeTree.new
-56.times do
+23.times do
 t.one_year_passes
 end
 puts(t.one_year_passes)
